@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/main_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:src="@mipmap/back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Payment"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.8"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Card Number"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <com.sunmi.print.round.RoundFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                app:roundBackgroundColor="@color/white"
+                app:roundCornerRadius="4dp"
+                app:roundStartColor="#333"
+                app:roundStrokeWidth="1dp">
+
+                <EditText
+                    android:id="@+id/et_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:hint=""
+                    android:inputType="numberDecimal"
+                    android:maxLength="19"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="#666666"
+                    android:textSize="15dp" />
+
+            </com.sunmi.print.round.RoundFrameLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_card_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="10dp"
+            android:visibility="invisible"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_card_typejcb"
+                android:visibility="gone"
+                android:layout_marginBottom="-10dp"
+                android:layout_width="60dp"
+                android:adjustViewBounds="true"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_jcb" />
+            <ImageView
+                android:id="@+id/iv_card_typeqq"
+                android:visibility="gone"
+                android:layout_width="50dp"
+                android:adjustViewBounds="true"
+                android:layout_height="wrap_content"
+                android:src="@drawable/quanquan" />
+            <ImageView
+                android:id="@+id/iv_card_typevisa"
+                android:visibility="gone"
+                android:adjustViewBounds="true"
+                android:layout_width="60dp"
+                android:layout_marginBottom="15dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/visa_logo" />
+            <ImageView
+                android:id="@+id/iv_card_typeqrc"
+                tools:visibility="visible"
+                android:visibility="gone"
+                android:layout_marginBottom="5dp"
+                android:adjustViewBounds="true"
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_qrcode" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Expiry Date"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <com.sunmi.print.round.RoundFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                app:roundBackgroundColor="@color/white"
+                app:roundCornerRadius="4dp"
+                app:roundStartColor="#333"
+                app:roundStrokeWidth="1dp">
+
+                <EditText
+                    android:id="@+id/et_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:hint=""
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="10dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="#666666"
+                    android:textSize="15dp" />
+
+            </com.sunmi.print.round.RoundFrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="CVV/CVV2"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <com.sunmi.print.round.RoundFrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    app:roundBackgroundColor="@color/white"
+                    app:roundCornerRadius="4dp"
+                    app:roundStartColor="#333"
+                    app:roundStrokeWidth="1dp">
+
+                    <EditText
+                        android:id="@+id/et_cvv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:maxLength="4"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textColorHint="#666666"
+                        android:textSize="15dp" />
+                </com.sunmi.print.round.RoundFrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.sunmi.print.round.RoundTextView
+        android:id="@+id/tv_next"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:roundBackgroundColor="@color/main_color"
+        app:roundCornerRadius="10dp" />
+</LinearLayout>

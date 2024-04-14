@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ Tencent is pleased to support the open source community by making QMUI_Android available.
+
+ Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.
+
+ Licensed under the MIT License (the "License"); you may not use this file except in
+ compliance with the License. You may obtain a copy of the License at
+
+ http://opensource.org/licenses/MIT
+
+ Unless required by applicable law or agreed to in writing, software distributed under the License is
+ distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ either express or implied. See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<resources>
+
+    <!-- my loading dialog -->
+    <style name="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <!--********************* Dialog *********************-->
+
+    <style name="QMUI.BaseDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:buttonStyle">@style/Button.Compat</item>
+    </style>
+
+    <style name="Button.Compat" parent="ButtonBase.Compat" />
+    <style name="ButtonBase.Compat" parent="@style/Widget.AppCompat.Button">
+        <!-- 取消 Button 字符默认大写的功能（会导致 Spannable 失效），默认值只影响 5.0 以上版本，但使用Compat包后，4.x 版本也会受到影响 -->
+        <!-- http://stackoverflow.com/questions/29007746/button-settext-with-spannable-dosent-work-for-android-5-0-lollipop -->
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="QMUI.TipDialog" parent="QMUI.BaseDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>

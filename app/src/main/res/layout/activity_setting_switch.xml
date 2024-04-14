@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/main_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:src="@mipmap/back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Settings"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/ll_switch_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fl_header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="开关1"
+            android:textColor="#333"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/et_switch_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="80dp"
+            android:inputType="number"
+            android:minWidth="90dp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sc_switch_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:checked="false" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fl_bind_account"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="神的旨意"
+            android:textColor="#333"
+            android:textSize="16dp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sc_bind_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:checked="true" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/ll_switch_4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_switch_a">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="开关4"
+            android:textColor="#333"
+            android:textSize="16dp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sc_switch_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:checked="false" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_switch_a"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fl_bind_account">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="成功"
+            android:textColor="#333"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/et_switch_succ_a_count"
+            android:layout_width="50dp"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:inputType="number"
+            android:minWidth="90dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="次后失败"
+            android:textColor="#333"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/et_switch_fail_a_count"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_gravity="end|center_vertical"
+            android:inputType="number"
+            android:minWidth="90dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="次拒绝"
+            android:textColor="#333"
+            android:textSize="16dp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sc_switch_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:checked="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_switch_b"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ll_switch_a">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="成功"
+            android:textColor="#333"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/et_switch_b_count"
+            android:layout_width="50dp"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:inputType="number"
+            android:minWidth="90dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="次后失败封锁"
+            android:textColor="#333"
+            android:textSize="16dp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sc_switch_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:checked="false" />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_switch_a">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="开关5"
+            android:textColor="#333"
+            android:textSize="16dp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sc_switch_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:checked="false" />
+    </FrameLayout>
+
+    <com.sunmi.print.round.RoundTextView
+        android:id="@+id/tv_ok"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text="OK"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:roundBackgroundColor="@color/main_color"
+        app:roundCornerRadius="8dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_switch_a"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="设置账号"
+                android:textColor="#333"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/et_account"
+                android:layout_marginStart="80dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"/>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_switch_a">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="设置密码"
+                android:textColor="#333"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/et_pwd"
+                android:layout_marginStart="80dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"/>
+        </FrameLayout>
+        <com.sunmi.print.round.RoundTextView
+            android:id="@+id/tv_account_ok"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:text="设置账号密码"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:roundBackgroundColor="@color/main_color"
+            app:roundCornerRadius="8dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fl_header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/main_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:src="@mipmap/back_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Amount"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".ui.MainActivity">
+
+            <com.sunmi.print.round.RoundTextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="SALE"
+                android:textColor="@color/black"
+                android:textSize="26dp"
+                android:textStyle="bold" />
+
+            <com.sunmi.print.round.RoundFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                app:roundBackgroundColor="@color/white"
+                app:roundCornerRadius="4dp"
+                app:roundStartColor="#333"
+                app:roundStrokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#666666"
+                        android:textSize="55dp"
+                        tools:text="111111" />
+                </LinearLayout>
+
+            </com.sunmi.print.round.RoundFrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/usd_container"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/risa_sel">
+
+                    <TextView
+                        android:id="@+id/tv_usd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="USD"
+                        android:textColor="@color/risa_color_sel"
+                        android:textSize="35dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/eur_container"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/risa_sel">
+
+                    <TextView
+                        android:id="@+id/tv_eur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="EUR"
+                        android:textColor="@color/risa_color_sel"
+                        android:textSize="35dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/hkd_container"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/risa_sel">
+
+                    <TextView
+                        android:id="@+id/tv_hkd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="HKD"
+                        android:textColor="@color/risa_color_sel"
+                        android:textSize="35dp" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/gbp_container"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/risa_sel">
+
+                    <TextView
+                        android:id="@+id/tv_gbp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="GBP"
+                        android:textColor="@color/risa_color_sel"
+                        android:textSize="35dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/jpy_container"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/risa_sel">
+
+                    <TextView
+                        android:id="@+id/tv_jpy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="JPY"
+                        android:textColor="@color/risa_color_sel"
+                        android:textSize="35dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/aud_container"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/risa_sel">
+
+                    <TextView
+                        android:id="@+id/tv_aud"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="AUD"
+                        android:textColor="@color/risa_color_sel"
+                        android:textSize="35dp" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/myr_container"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/risa_sel">
+
+                    <TextView
+                        android:id="@+id/tv_myr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="MYR"
+                        android:textColor="@color/risa_color_sel"
+                        android:textSize="35dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/sar_container"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/risa_sel">
+
+                    <TextView
+                        android:id="@+id/tv_sar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="SAR"
+                        android:textColor="@color/risa_color_sel"
+                        android:textSize="35dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/qar_container"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/risa_sel">
+
+                    <TextView
+                        android:id="@+id/tv_qar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="QAR"
+                        android:textColor="@color/risa_color_sel"
+                        android:textSize="35dp" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <com.sunmi.print.round.RoundTextView
+                android:id="@+id/tv_pay"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="Pay"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:roundBackgroundColor="@color/main_color"
+                app:roundCornerRadius="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:visibility="gone">
+
+        <com.sunmi.print.round.RoundLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            app:roundBackgroundColor="@color/white"
+            app:roundCornerRadius="10dp">
+
+            <ProgressBar
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/tv_loading_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#333"
+                android:textSize="16dp" />
+        </com.sunmi.print.round.RoundLinearLayout>
+    </FrameLayout>
+</FrameLayout>
