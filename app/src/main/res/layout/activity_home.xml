@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black">
 
-    <Button
-        android:id="@+id/btn_request"
-        android:textSize="15dp"
+    <com.sunmi.print.round.RoundFrameLayout
+        android:id="@+id/fl_receive_money"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
         android:text="请求"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:textSize="15dp"
+        app:roundBackgroundColor="#23CF2A"
+        app:roundCornerRadius="@dimen/dp_8">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_receive_money"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="收款"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_18" />
+    </com.sunmi.print.round.RoundFrameLayout>
+
 </FrameLayout>

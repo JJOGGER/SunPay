@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="qmui_click_timestamp" type="id" />
+    <item name="about_version_code_custom" type="id"/>
+    <item name="auto_focus_custom" type="id"/>
+    <item name="complete_password_custom" type="id"/>
+    <item name="complete_qrpaword_custom" type="id"/>
+    <item name="complete_zhuce_custom" type="id"/>
+    <item name="decode_custom" type="id"/>
+    <item name="decode_failed_custom" type="id"/>
+    <item name="decode_succeeded_custom" type="id"/>
+    <item name="encode_failed_custom" type="id"/>
+    <item name="encode_succeeded_custom" type="id"/>
+    <item name="gridview_custom" type="id"/>
+    <item name="launch_product_query_custom" type="id"/>
+    <item name="quit_custom" type="id"/>
+    <item name="register_phone_edittext_custom" type="id"/>
+    <item name="restart_preview_custom" type="id"/>
+    <item name="return_scan_result_custom" type="id"/>
+    <item name="search_book_contents_failed_custom" type="id"/>
+    <item name="search_book_contents_succeeded_custom" type="id"/>
+    <item name="split_custom" type="id"/>
+    <item name="webview_custom" type="id"/>
+    <item name="zhuce_title_custom" type="id"/>
 </resources>

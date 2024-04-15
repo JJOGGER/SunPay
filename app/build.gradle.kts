@@ -62,6 +62,12 @@ android {
 dependencies {
     implementation(files("libs/PosSdkXzy1.2.3.0.aar"))
     implementation ("com.sunmi:printerx:1.0.15")
+    implementation ("com.github.tamsiree.RxTool:RxKit:2.6.3")
+    implementation ("com.github.tamsiree.RxTool:RxCamera:2.6.3")
+    implementation ("com.github.tamsiree.RxTool:RxArcGisKit:2.6.3")
+    implementation ("com.github.tamsiree.RxTool:RxFeature:2.6.3")
+    implementation ("com.github.tamsiree.RxTool:RxUI:2.6.3")
+    implementation ("com.google.zxing:core:3.3.3")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation("androidx.activity:activity-compose:1.7.0")

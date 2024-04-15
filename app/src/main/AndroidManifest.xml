@@ -42,6 +42,14 @@
 
         </activity>
         <activity
+            android:exported="false"
+            android:name="com.tamsiree.rxui.activity.ActivityWebView"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.sunmi.print.ui.HomeActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -59,6 +67,7 @@
         <activity android:name="com.sunmi.print.ui.SettingSwitchActivity" />
         <activity android:name="com.sunmi.print.ui.SettingsActivity" />
         <activity android:name="com.sunmi.print.ui.BindResultActivity" />
+        <activity android:name="com.sunmi.print.ui.ScanerCodeActivity" />
     </application>
 
 </manifest>
