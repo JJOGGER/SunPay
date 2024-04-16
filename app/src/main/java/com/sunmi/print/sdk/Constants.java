@@ -4,6 +4,7 @@ public class Constants {
 
     //请求地址
     public static final String url = "https://api.lspay.tech/gateway/unifiedorder";
+    public static final String query = "https://api.lspay.tech/gateway/query";
 
     //微信小程序 & 支付宝支付
    public static final String WX_ALIPAY_KEY =

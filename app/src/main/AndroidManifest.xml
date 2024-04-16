@@ -68,6 +68,7 @@
         <activity android:name="com.sunmi.print.ui.SettingsActivity" />
         <activity android:name="com.sunmi.print.ui.BindResultActivity" />
         <activity android:name="com.sunmi.print.ui.ScanerCodeActivity" />
+        <activity android:name="com.sunmi.print.ui.ReceiveMoneyActivity" />
     </application>
 
 </manifest>

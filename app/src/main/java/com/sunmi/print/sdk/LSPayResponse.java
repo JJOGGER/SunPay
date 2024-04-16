@@ -43,7 +43,7 @@ public class LSPayResponse {
         private String mch_order_no;//支付订单号
         private String pay_order_id;//商户订单号 返回商户传入的订单号
         private int amount;
-        private int order_state;//订单状态
+        private int order_state;//订单状态//支付订单状态 0-订单生成 1-支付中 2-支付成功 3-支付失败 4-已撤销 5-已退款 6-订单关闭
         private PayInfo pay_info;//支付数据
         private String trans_status;//交易状态
 

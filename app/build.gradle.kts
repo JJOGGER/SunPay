@@ -67,6 +67,10 @@ dependencies {
     implementation ("com.github.tamsiree.RxTool:RxArcGisKit:2.6.3")
     implementation ("com.github.tamsiree.RxTool:RxFeature:2.6.3")
     implementation ("com.github.tamsiree.RxTool:RxUI:2.6.3")
+
+    implementation("com.squareup.retrofit2:retrofit:2.6.0")
+    implementation("com.squareup.okhttp3:okhttp:4.2.2")
+    implementation("com.squareup.retrofit2:converter-gson:2.6.0")
     implementation ("com.google.zxing:core:3.3.3")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")

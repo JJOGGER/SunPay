@@ -7,7 +7,14 @@ import com.tencent.mmkv.MMKV
 class MApplication : Application() {
     override fun onCreate() {
         super.onCreate()
-        RxTool.init(this)
+
+        app = this
         MMKV.initialize(this)
+    }
+    companion object {
+        private var app: Application? = null
+        fun getApplication(): Application {
+            return app!!
+        }
     }
 }
